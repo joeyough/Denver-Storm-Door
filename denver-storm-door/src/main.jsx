@@ -1,9 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './DoorBuilder'
+import DoorBuilder from './DoorBuilder'
+import StormDoorMeasure from './StormDoorMeasure.jsx'
+
+function Router() {
+  const path = window.location.hash
+  if (path === '#measure') return <StormDoorMeasure />
+  return <DoorBuilder />
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Router />
   </React.StrictMode>
 )
