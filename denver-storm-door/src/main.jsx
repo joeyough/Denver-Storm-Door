@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import StormDoorMeasure from './StormDoorMeasure.jsx'
+import App from './DoorBuilder'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <StormDoorMeasure />
+    <App />
   </React.StrictMode>
 )
