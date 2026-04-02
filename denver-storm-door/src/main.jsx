@@ -11,8 +11,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>
 )
-```
-
-Then create a new file in the `denver-storm-door` folder (not src) called `_redirects` with:
-```
-/*    /index.html   200
