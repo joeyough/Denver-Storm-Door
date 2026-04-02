@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom/client'
 import DoorBuilder from './DoorBuilder'
 import StormDoorMeasure from './StormDoorMeasure.jsx'
 
-function Router() {
-  const path = window.location.hash
-  if (path === '#measure') return <StormDoorMeasure />
-  return <DoorBuilder />
-}
+const path = window.location.pathname
+const App = path.includes('measure') ? StormDoorMeasure : DoorBuilder
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Router />
+    <App />
   </React.StrictMode>
 )
+```
+
+Then create a new file in the `denver-storm-door` folder (not src) called `_redirects` with:
+```
+/*    /index.html   200
